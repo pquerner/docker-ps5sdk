@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  ps5sdk:
+    container_name: ps5sdk
+    build:
+      dockerfile: Dockerfile
+    environment:
+      - PS5SDK_FW="0x450"
+    volumes:
+      - /path/to/PS5SDK:/usr/local/ps5dev
+    networks:
+      - default
